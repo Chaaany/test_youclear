@@ -1,0 +1,19 @@
+<div>
+    {% comment %} {% for test in tests %} {% endcomment %}
+    이름 : {{ test.name }}
+</div>
+<div>
+    이미지 <img src="{{ test.image.url }}">
+</div>
+<div>    
+    태그 : {% for tag in test.tags.all %} #{{ tag.name }} {% endfor %}
+    {% comment %} {% endfor %} {% endcomment %}
+</div>
+<div>
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 30%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+    <div class='embed-container'>
+        <iframe src='https://www.youtube.com/embed/{{test.video}}' frameborder='0' allowfullscreen></iframe>
+    </div>
+
+

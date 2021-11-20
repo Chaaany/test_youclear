@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail |{{ youtuber.name }}</title>
+    <link rel="stylesheet" href="{% static 'youtuber/css/styles.css' %}">
+</head>
+
+<body>
+    <div><img src="{{ youtuber.profile.url }}" alt="{{youtuber.name}} profile.png"></div>
+    <div>
+        <div>{{ youtuber.name }}</div>
+        <div>{{ youtuber.description }}</div>
+        <div>{{ youtuber.tags }}</div>
+    </div>
+    <div>
+        <style>
+            .embed-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                max-width: 50%;
+            }
+
+            .embed-container iframe,
+            .embed-container object,
+            .embed-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <div class='embed-container'>
+            <iframe src='https://www.youtube.com/embed/{{youtuber.video_1}}' frameborder='0' allowfullscreen></iframe>
+        </div>
+
+        {% if youtuber.video_2 %}
+        <style>
+            .embed-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                max-width: 50%;
+            }
+
+            .embed-container iframe,
+            .embed-container object,
+            .embed-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <div class='embed-container'>
+            <iframe src='https://www.youtube.com/embed/{{youtuber.video_2}}' frameborder='0' allowfullscreen></iframe>
+        </div>
+        {% endif %}
+
+        {% if youtuber.video_3 %}
+        <style>
+            .embed-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                max-width: 50%;
+            }
+
+            .embed-container iframe,
+            .embed-container object,
+            .embed-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <div class='embed-container'>
+            <iframe src='https://www.youtube.com/embed/{{youtuber.video_3}}' frameborder='0' allowfullscreen></iframe>
+        </div>
+        {% endif %}
+
+        {% if youtuber.video_4 %}
+        <style>
+            .embed-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                max-width: 50%;
+            }
+
+            .embed-container iframe,
+            .embed-container object,
+            .embed-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <div class='embed-container'>
+            <iframe src='https://www.youtube.com/embed/{{youtuber.video_4}}' frameborder='0' allowfullscreen></iframe>
+        </div>
+        {% endif %}
+
+        {% if youtuber.video_5 %}
+        <style>
+            .embed-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                max-width: 50%;
+            }
+
+            .embed-container iframe,
+            .embed-container object,
+            .embed-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <div class='embed-container'>
+            <iframe src='https://www.youtube.com/embed/{{youtuber.video_5}}' frameborder='0' allowfullscreen></iframe>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
